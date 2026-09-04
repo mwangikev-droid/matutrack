@@ -14,7 +14,7 @@ export function EmptyState({ title, message, icon, className }: EmptyStateProps)
   return (
     <View className={cn('items-center justify-center gap-2 px-8 py-14', className)}>
       {icon ? (
-        <View className="mb-1 h-14 w-14 items-center justify-center rounded-full bg-surface-secondary">
+        <View className="bg-surface-secondary mb-1 h-14 w-14 items-center justify-center rounded-full">
           {icon}
         </View>
       ) : null}

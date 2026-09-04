@@ -33,7 +33,11 @@ export function StatusPill({ crowd, label, className }: StatusPillProps) {
 
   return (
     <View
-      className={cn('flex-row items-center gap-1.5 rounded-full px-2.5 py-1', style.wrap, className)}
+      className={cn(
+        'flex-row items-center gap-1.5 rounded-full px-2.5 py-1',
+        style.wrap,
+        className,
+      )}
     >
       <View className={cn('h-1.5 w-1.5 rounded-full', style.dot)} />
       <Typography type="body-xs" weight="semibold" className={style.text}>

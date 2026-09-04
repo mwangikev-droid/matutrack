@@ -32,7 +32,7 @@ export function RouteCard({ route, now, showCity = false, className }: RouteCard
       accessibilityRole="button"
       accessibilityLabel={`${route.number} ${route.from} to ${route.to}`}
       onPress={() => router.push(routeHref(route.id))}
-      className={cn('rounded-2xl border border-border bg-surface p-3.5', className)}
+      className={cn('border-border bg-surface rounded-2xl border p-3.5', className)}
     >
       <View className="flex-row items-center gap-3">
         <RouteBadge number={route.number} color={route.color} />
@@ -50,7 +50,7 @@ export function RouteCard({ route, now, showCity = false, className }: RouteCard
 
       <View className="mt-3 flex-row items-center gap-2">
         <StatusPill crowd={status.crowd} label={status.crowdLabel} />
-        <View className="rounded-full bg-surface-secondary px-2.5 py-1">
+        <View className="bg-surface-secondary rounded-full px-2.5 py-1">
           <Typography type="body-xs" weight="semibold">
             {fareText(fare)}
             <Typography type="body-xs" color="muted">

@@ -112,7 +112,12 @@ export const ROUTES: MatatuRoute[] = [
     notes: 'Loudest sound systems in the city. Fares spike sharply when it rains on Ngong Road.',
     stages: [
       { name: 'Kencom', latitude: -1.2857, longitude: 36.8244, landmark: 'City Hall Way' },
-      { name: 'Nairobi Hospital', latitude: -1.2977, longitude: 36.8083, landmark: 'Argwings Kodhek' },
+      {
+        name: 'Nairobi Hospital',
+        latitude: -1.2977,
+        longitude: 36.8083,
+        landmark: 'Argwings Kodhek',
+      },
       { name: 'Adams Arcade', latitude: -1.2977, longitude: 36.7783 },
       { name: 'Racecourse', latitude: -1.301, longitude: 36.762, landmark: 'Ngong Racecourse' },
       { name: 'Dagoretti Corner', latitude: -1.2985, longitude: 36.7443 },
@@ -192,7 +197,12 @@ export const ROUTES: MatatuRoute[] = [
       { name: 'Ambassadeur', latitude: -1.2833, longitude: 36.8265 },
       { name: 'City Stadium', latitude: -1.2925, longitude: 36.842 },
       { name: 'Makadara', latitude: -1.2966, longitude: 36.862, landmark: 'Makadara Law Courts' },
-      { name: 'Buruburu', latitude: -1.287, longitude: 36.888, landmark: 'Buruburu Shopping Centre' },
+      {
+        name: 'Buruburu',
+        latitude: -1.287,
+        longitude: 36.888,
+        landmark: 'Buruburu Shopping Centre',
+      },
       { name: 'Umoja 1', latitude: -1.2793, longitude: 36.893 },
     ],
   },

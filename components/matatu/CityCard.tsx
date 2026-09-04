@@ -24,7 +24,10 @@ export function CityCard({ city, accentColor, className }: CityCardProps) {
       accessibilityRole="button"
       accessibilityLabel={`${city.name} matatu routes`}
       onPress={() => router.push(cityHref(city.id))}
-      className={cn('flex-row overflow-hidden rounded-2xl border border-border bg-surface', className)}
+      className={cn(
+        'border-border bg-surface flex-row overflow-hidden rounded-2xl border',
+        className,
+      )}
     >
       <View className="w-2" style={{ backgroundColor: accentColor }} />
       <View className="flex-1 p-4">

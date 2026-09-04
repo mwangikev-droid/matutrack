@@ -31,7 +31,7 @@ export function LiveStatusCard({ route, status, showCity = true }: LiveStatusCar
       accessibilityRole="button"
       accessibilityLabel={`${route.number} ${route.from} to ${route.to}, ${status.crowdLabel}`}
       onPress={() => router.push(routeHref(route.id))}
-      className="rounded-2xl border border-border bg-surface p-3.5"
+      className="border-border bg-surface rounded-2xl border p-3.5"
     >
       <View className="flex-row items-center gap-3">
         <RouteBadge number={route.number} color={route.color} size="sm" />
@@ -47,7 +47,7 @@ export function LiveStatusCard({ route, status, showCity = true }: LiveStatusCar
         <StatusPill crowd={status.crowd} label={status.crowdLabel} />
       </View>
 
-      <View className="mt-3 h-2 overflow-hidden rounded-full bg-surface-secondary">
+      <View className="bg-surface-secondary mt-3 h-2 overflow-hidden rounded-full">
         <View
           style={{
             backgroundColor: BAR_COLORS[status.crowd],

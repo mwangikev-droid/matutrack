@@ -74,7 +74,7 @@ export function CityMap({ city, routes, height = 220 }: CityMapProps) {
   );
 
   return (
-    <View className="overflow-hidden rounded-2xl border border-border" style={{ height }}>
+    <View className="border-border overflow-hidden rounded-2xl border" style={{ height }}>
       <MapView
         initialRegion={region}
         markers={markers}

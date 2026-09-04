@@ -18,7 +18,7 @@ export function StageTimeline({ route }: StageTimelineProps) {
         const isTerminus = index === 0 || index === lastIndex;
 
         return (
-          <View key={`${stage.name}-${index}`} className="flex-row">
+          <View key={`${stage.name}-${stage.latitude}-${stage.longitude}`} className="flex-row">
             <View className="w-8 items-center">
               <View
                 className="rounded-full"
@@ -43,7 +43,7 @@ export function StageTimeline({ route }: StageTimelineProps) {
                   {stage.name}
                 </Typography>
                 {isTerminus ? (
-                  <View className="rounded-full bg-surface-secondary px-2 py-0.5">
+                  <View className="bg-surface-secondary rounded-full px-2 py-0.5">
                     <Typography type="body-xs" color="muted">
                       {index === 0 ? 'Start' : 'Terminus'}
                     </Typography>

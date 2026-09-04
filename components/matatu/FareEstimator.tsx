@@ -31,7 +31,7 @@ function StageRow({ label, route, selectedIndex, onSelect }: StageRowProps) {
       >
         {route.stages.map((stage, index) => (
           <Chip
-            key={`${label}-${stage.name}-${index}`}
+            key={`${label}-${stage.name}-${stage.latitude}`}
             size="sm"
             variant={index === selectedIndex ? 'primary' : 'secondary'}
             onPress={() => onSelect(index)}
@@ -51,7 +51,7 @@ export function FareEstimator({ route, now }: FareEstimatorProps) {
   const estimate = estimateFare(route, boardingIndex, alightingIndex);
 
   return (
-    <View className="gap-4 rounded-2xl border border-border bg-surface p-4">
+    <View className="border-border bg-surface gap-4 rounded-2xl border p-4">
       <View>
         <Typography type="h6">Fare estimator</Typography>
         <Typography type="body-xs" color="muted">
@@ -111,7 +111,7 @@ export function FareEstimator({ route, now }: FareEstimatorProps) {
           </Typography>
         </View>
       ) : (
-        <View className="rounded-xl bg-surface-secondary p-3">
+        <View className="bg-surface-secondary rounded-xl p-3">
           <Typography type="body-sm" color="muted">
             Pick two different stages to see the fare.
           </Typography>

@@ -21,7 +21,7 @@ export function FavouriteButton({ routeId, size = 20, className }: FavouriteButt
       accessibilityLabel={isFavourite ? 'Remove from saved routes' : 'Save this route'}
       hitSlop={10}
       onPress={() => toggle(routeId)}
-      className={cn('h-9 w-9 items-center justify-center rounded-full bg-surface', className)}
+      className={cn('bg-surface h-9 w-9 items-center justify-center rounded-full', className)}
     >
       <Star
         size={size}

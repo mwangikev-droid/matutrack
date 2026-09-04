@@ -87,7 +87,7 @@ function HeroHeader({ now }: { now: Date }) {
         accessibilityRole="button"
         accessibilityLabel="Search routes, stages and saccos"
         onPress={() => router.push('/routes')}
-        className="flex-row items-center gap-2 rounded-2xl border border-border bg-surface px-4 py-3.5"
+        className="border-border bg-surface flex-row items-center gap-2 rounded-2xl border px-4 py-3.5"
       >
         <Search size={18} color={muted} />
         <Typography type="body-sm" color="muted">
@@ -95,8 +95,8 @@ function HeroHeader({ now }: { now: Date }) {
         </Typography>
       </PressableFeedback>
 
-      <View className="flex-row items-center gap-3 rounded-2xl border border-border bg-surface p-4">
-        <View className="h-10 w-10 items-center justify-center rounded-full bg-surface-secondary">
+      <View className="border-border bg-surface flex-row items-center gap-3 rounded-2xl border p-4">
+        <View className="bg-surface-secondary h-10 w-10 items-center justify-center rounded-full">
           <Clock size={18} color={peak ? '#b45309' : accent} />
         </View>
         <View className="flex-1">
@@ -121,7 +121,7 @@ export default function CitiesScreen() {
   const { now } = useLiveClock(60000);
 
   return (
-    <View className="flex-1 bg-background">
+    <View className="bg-background flex-1">
       <FlatList
         data={CITIES}
         keyExtractor={(city) => city.id}

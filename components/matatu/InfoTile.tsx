@@ -12,7 +12,7 @@ interface InfoTileProps {
 
 export function InfoTile({ label, value, icon, className }: InfoTileProps) {
   return (
-    <View className={cn('flex-1 rounded-xl bg-surface-secondary p-3', className)}>
+    <View className={cn('bg-surface-secondary flex-1 rounded-xl p-3', className)}>
       <View className="flex-row items-center gap-1.5">
         {icon}
         <Typography type="body-xs" color="muted">
