@@ -37,4 +37,31 @@
  * }
  */
 
+@layer theme {
+  :root {
+    @variant light {
+      --accent: oklch(0.52 0.14 154);
+      --accent-foreground: oklch(0.99 0 0);
+      --focus: var(--accent);
+    }
+
+    @variant dark {
+      --accent: oklch(0.52 0.14 154);
+      --accent-foreground: oklch(0.99 0 0);
+      --focus: var(--accent);
+    }
+  }
+}
+
+@theme {
+  --color-matatu-green: oklch(0.52 0.14 154);
+  --color-matatu-green-soft: oklch(0.94 0.05 154);
+  --color-matatu-amber: oklch(0.75 0.15 78);
+  --color-matatu-amber-soft: oklch(0.95 0.06 88);
+  --color-matatu-red: oklch(0.56 0.19 25);
+  --color-matatu-red-soft: oklch(0.94 0.05 25);
+  --color-matatu-ink: oklch(0.26 0.03 250);
+  --color-matatu-sand: oklch(0.97 0.015 92);
+}
+
 @source './node_modules/heroui-native/lib';

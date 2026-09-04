@@ -1,4 +1,4 @@
-import { Home } from 'lucide-react-native';
+import { Activity, MapPinned, Route, Star } from 'lucide-react-native';
 import { Tabs } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { useThemeColor } from 'heroui-native';
@@ -35,8 +35,33 @@ export default function TabLayout() {
         <Tabs.Screen
           name="index"
           options={{
-            title: 'Home',
-            tabBarIcon: ({ color, size }) => <Home color={color} size={size ?? 24} />,
+            title: 'MatuTrack',
+            tabBarLabel: 'Cities',
+            tabBarIcon: ({ color, size }) => <MapPinned color={color} size={size ?? 24} />,
+          }}
+        />
+        <Tabs.Screen
+          name="routes"
+          options={{
+            title: 'Find a route',
+            tabBarLabel: 'Routes',
+            tabBarIcon: ({ color, size }) => <Route color={color} size={size ?? 24} />,
+          }}
+        />
+        <Tabs.Screen
+          name="live"
+          options={{
+            title: 'Live board',
+            tabBarLabel: 'Live',
+            tabBarIcon: ({ color, size }) => <Activity color={color} size={size ?? 24} />,
+          }}
+        />
+        <Tabs.Screen
+          name="saved"
+          options={{
+            title: 'Saved routes',
+            tabBarLabel: 'Saved',
+            tabBarIcon: ({ color, size }) => <Star color={color} size={size ?? 24} />,
           }}
         />
       </Tabs>
